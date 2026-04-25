@@ -1,7 +1,7 @@
 import re
 from functools import wraps
 
-import pyodbc
+
 from app.services.audit_service import log_audit
 from app.services.auth_service import authenticate_user, get_user_by_id, register_user
 from app.services.otp_service import create_otp_session, verify_otp
