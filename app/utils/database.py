@@ -1,7 +1,7 @@
 import logging
 from contextlib import contextmanager
 
-import pyodbc
+import psycopg2
 from flask import current_app
 
 logger = logging.getLogger(__name__)
@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 def get_db_connection():
     """Get database connection"""
     try:
-        conn = pyodbc.connect(current_app.config["DATABASE_CONNECTION_STRING"])
+        conn = psycopg2.connect(current_app.config["SQLALCHEMY_DATABASE_URI"])
         print("Database connected!")
         return conn
     except Exception as e:
