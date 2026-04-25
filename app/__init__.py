@@ -79,6 +79,8 @@ def create_app(config_name=None):
     def internal_error(error):
         return {"error": "Internal server error"}, 500
 
-    
+    @app.route("/")
+    def home():
+        return {"status": "API running"}
 
     return app

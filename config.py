@@ -16,10 +16,13 @@ class Config:
     )
 
     # SQL Server Database
-    DATABASE_CONNECTION_STRING = (
-        os.environ.get("DATABASE_CONNECTION_STRING")
-        or "DRIVER={ODBC Driver 17 for SQL Server};SERVER=LAPTOP-N594MJOP;DATABASE=xBankzDb;Trusted_Connection=yes;"
-    )
+   # DATABASE_CONNECTION_STRING = (
+    #    os.environ.get("DATABASE_CONNECTION_STRING")
+     #   or "DRIVER={ODBC Driver 17 for SQL Server};SERVER=LAPTOP-N594MJOP;DATABASE=xBankzDb;Trusted_Connection=yes;"
+    #)
+     
+     # PostgreSQL Database
+    SQLALCHEMY_DATABASE_URI = os.environ.get("postgresql://xbankz_user:sApnCliJnJcP3bltkcEZcLJ7a3mrlwEj@dpg-d7mc7gapmmbs73btj630-a.virginia-postgres.render.com/xbankz")
 
     # Session Configuration
     SESSION_COOKIE_SECURE = (
