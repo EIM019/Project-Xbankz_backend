@@ -22,7 +22,7 @@ class Config:
     #)
      
      # PostgreSQL Database
-    SQLALCHEMY_DATABASE_URI = os.environ.get("postgresql://xbankz_user:sApnCliJnJcP3bltkcEZcLJ7a3mrlwEj@dpg-d7mc7gapmmbs73btj630-a.virginia-postgres.render.com/xbankz")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI") 
 
     # Session Configuration
     SESSION_COOKIE_SECURE = (
